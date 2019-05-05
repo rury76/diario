@@ -1,6 +1,22 @@
 ## Proyecto de restful en Nodejs
 #### Objetivo:
 El objetivo de esta practica es aprender a desarrollar con javascript del lado del servidor.
+
+##Atención
+El archivo app.js llama a las variables globales las cuales se crearon en una carpeta llamada environment dentro esta el archivo config.environment.js con las variables inicalizads:
+
+`process.env.PORT = process.env.PORT || 3000;`
+
+ `process.env.MONGO_USER = 'admin';`
+ 
+ `process.env.MONGO_PASSWORD = 'secret';`
+ 
+ `process.env.MONGO_SERVER = 'localhost';`
+ 
+` process.env.MONGO_PORT = '27017';`
+
+Es necesario crearlo para correr el proyecto.
+ 
 #### Tecnologias utilizadas:
 1. **Docker**
 2. **Mongodb**

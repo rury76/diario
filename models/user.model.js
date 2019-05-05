@@ -39,7 +39,13 @@ const UserModel = new Schema({
     }
 });
 
-
+UserModel.methods.toJSON = function() {
+    let user = this;
+    let userObject = user.toObject();
+    delete userObject.password;
+    delete userObject.seed;
+    return userObject;
+};
 
 UserModel.plugin(uniquevalidator, {message: '{PATH} El correo ya existe'});
 
